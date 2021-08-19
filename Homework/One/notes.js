@@ -65,3 +65,27 @@ function bmi_to_kilo(feet, inches, BMI) {
 
 console.log("Minimum Mass: " + bmi_to_kilo(5, 9, 25));
 console.log("Maxiumum Mass" + bmi_to_kilo(5, 9, 30));
+
+/*
+d At a resting pulse rate of 79 beats per minute, the human heart typically pumps about 67 mL of blood per beat. Blood has
+density of 1060 kg/m^3. Circulating all of the blood in the body through the heart takes about 1 min for a person at rest.
+
+Approximately how much blood is in the body?
+
+On average, what mass of blood does the heart pump with each heart beat?
+*/
+
+const beats_per_minute = 79;
+
+const blood_per_beat = 67; // mL
+
+const blood_pressure = 1060; // kg/m^3
+
+const time_to_circulate = 1;
+
+const volume_in_human =
+  (time_to_circulate * blood_per_beat * beats_per_minute) / 1_000_000;
+
+const mass_per_beat = (blood_pressure * blood_per_beat) / 1_000_000;
+
+console.log({ volume_in_human, mass_per_beat });
