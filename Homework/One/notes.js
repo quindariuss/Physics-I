@@ -25,3 +25,14 @@ function heartbeats_to_years(amount_of_years) {
 }
 
 console.log(parseFloat(heartbeats_to_years(4.0)).toPrecision(4));
+
+/*
+Arrange the measurements from longest length to shortest length.
+*/
+
+const mile = 1609;
+const meters = 10;
+const centimeter = (10 * 10 * 10 * 10) / 100;
+const nanometer = (10 * 10 * 10 * 10 * 10) / 1_000_000_000;
+
+console.log({ mile, meters, centimeter, nanometer });
