@@ -89,3 +89,15 @@ const volume_in_human =
 const mass_per_beat = (blood_pressure * blood_per_beat) / 1_000_000;
 
 console.log({ volume_in_human, mass_per_beat });
+
+/*
+In physics lab, you measure three quantities: x, y, and z. Suppose that
+x = 1.7 cm,
+y = 0.4 s, and
+z = 4.1 cm/s.
+Classify each mathematical expression containing these quantities as either being possibly meaningful or not meaningful.
+*/
+
+const x = 1.7; // centimeters
+const y = 0.4; // seconds
+const z = 4.1; // cm/s
