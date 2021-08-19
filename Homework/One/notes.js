@@ -8,6 +8,20 @@ in this question.
 
 const heartbeats = 68.0;
 
-const years_one = 4.0;
+const minuites_in_hour = 60;
 
-console.log(heartbeats * years_one);
+const hours_in_day = 24;
+
+const days_in_year = 365;
+
+function heartbeats_to_years(amount_of_years) {
+  const total_heartbeats =
+    heartbeats *
+    minuites_in_hour *
+    hours_in_day *
+    days_in_year *
+    amount_of_years;
+  return total_heartbeats;
+}
+
+console.log(parseFloat(heartbeats_to_years(4.0)).toPrecision(4));
