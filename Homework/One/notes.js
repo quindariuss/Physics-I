@@ -36,3 +36,32 @@ const centimeter = (10 * 10 * 10 * 10) / 100;
 const nanometer = (10 * 10 * 10 * 10 * 10) / 1_000_000_000;
 
 console.log({ mile, meters, centimeter, nanometer });
+
+/*
+A person with a BMI between 25.0 and 30.0 is considered overweight.
+If a person is  5'9" tall
+what range of mass m_min≤𝑚≤m_max
+will he be considered overweight?
+*/
+
+const overweight_min = 25;
+const overweight_max = 30;
+
+function BMI(feet, inches, mass) {
+  let total_inches = feet * 12 + inches;
+  total_inches *= total_inches;
+  const weight_divide_height = mass / total_inches;
+
+  return 703 * weight_divide_height;
+}
+
+function bmi_to_kilo(feet, inches, BMI) {
+  let total_inches = feet * 12 + inches;
+  total_inches *= total_inches;
+  const height_x_BMI = total_inches * BMI;
+  const calculated_BMI = height_x_BMI / 703;
+  return calculated_BMI / 2.2;
+}
+
+console.log("Minimum Mass: " + bmi_to_kilo(5, 9, 25));
+console.log("Maxiumum Mass" + bmi_to_kilo(5, 9, 30));
